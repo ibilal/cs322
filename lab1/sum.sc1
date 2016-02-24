@@ -1,0 +1,50 @@
+# Return the sum of array elements (Input: array and its elm count)
+
+StrLit 0: "Array sum:"
+
+Func 1: 2
+0.  CONST 0
+1.  STORE 2
+2.  CONST 0
+3.  STORE 3
+4.  LOAD 3
+5.  LOAD 1
+6.  IFGE +12
+7.  LOAD 2
+8.  LOAD 0
+9.  LOAD 3
+10. ALOAD 
+11. ADD
+12. STORE 2
+13. LOAD 3
+14. CONST 1
+15. ADD
+16. STORE 3
+17. GOTO -13
+18. LOAD 2
+19. VRETURN
+
+Func 0: 0
+0.  CONST 3
+1.  NEWARRAY
+2.  STORE 0
+3.  LOAD 0
+4.  CONST 0
+5.  CONST 1
+6.  ASTORE
+7.  LOAD 0
+8.  CONST 1
+9.  CONST 2
+10. ASTORE
+11. LOAD 0
+12. CONST 2
+13. CONST 3
+14. ASTORE
+15. LOAD 0
+16. CONST 3
+17. CALL 1
+18. STORE 1
+19. SPRINT 0
+20. LOAD 1
+21. PRINT
+22. RETURN

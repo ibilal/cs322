@@ -1,0 +1,15 @@
+# IR1 Program
+
+_main ()
+{
+ t2 = 1 == 1
+ t3 = 2 > 4
+ t1 = t2 && t3
+ x = t1
+ t5 = 2 != 2
+ t4 = t5 && x
+ y = t4
+ call _printInt(x)
+ call _printInt(y)
+ return 
+}

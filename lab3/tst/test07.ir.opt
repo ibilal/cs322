@@ -1,0 +1,8 @@
+# IR0 Program
+ i = 7
+ print (i)
+ goto L1
+L0:
+ t1 = i - 1
+ print (t1)
+L1:

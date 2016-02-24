@@ -1,0 +1,8 @@
+# IR0 Program
+ b = false
+ x = 1
+ goto L1
+L0:
+ x = 2
+L1:
+ print (x)

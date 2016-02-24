@@ -1,0 +1,10 @@
+# IR0 Program
+ t5 = 2 < 4
+ t6 = 3 == 5
+ t4 = t5 || t6
+ x = t4
+ t10 = !true
+ t9 = t10 == false
+ y = t9
+ t12 = x == y
+ print (t12)

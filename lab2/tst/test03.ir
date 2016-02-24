@@ -1,0 +1,6 @@
+# IR0 Program
+ t2 = 3 > 0
+ if t2 == false goto L2
+ x = 1
+L2:
+ print (x)

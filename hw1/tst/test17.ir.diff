@@ -1,0 +1,18 @@
+5,7c5,7
+<  t2 = i + j
+<  t1 = t2 + k
+<  return t1
+---
+>  t1 = i + j
+>  t2 = t1 + k
+>  return t2
+12,15c12,15
+<  t4 = call _value(1, 1, 1)
+<  t5 = call _value(2, 2, 2)
+<  t3 = t4 + t5
+<  return t3
+---
+>  t3 = call _value(1, 1, 1)
+>  t4 = call _value(2, 2, 2)
+>  t5 = t3 + t4
+>  return t5

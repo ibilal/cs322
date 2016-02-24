@@ -1,0 +1,16 @@
+# IR1 Program
+
+_main ()
+{
+ t2 = 1 > 0
+ t3 = 1 > 2
+ t1 = t2 || t3
+ x = t1
+ t5 = 1 + 2
+ t6 = 3 - 1
+ t4 = t5 * t6
+ y = t4
+ call _printInt(x)
+ call _printInt(y)
+ return 
+}

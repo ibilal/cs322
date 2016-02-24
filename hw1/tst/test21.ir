@@ -1,0 +1,14 @@
+# IR1 Program
+
+_main ()
+{
+ t2 = 2 * 4
+ t1 = 1 + t2
+ x = t1
+ t4 = -5
+ t3 = t4 + 2
+ y = t3
+ t5 = x - y
+ call _printInt(t5)
+ return 
+}

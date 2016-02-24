@@ -1,0 +1,15 @@
+6c6,9
+<  t1 = true || b
+---
+>  t1 = true
+>  if true == true goto L1
+>  t1 = b
+> L1:
+9c12
+<  goto L1
+---
+>  goto L2
+12c15
+< L1:
+---
+> L2:

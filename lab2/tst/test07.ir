@@ -1,0 +1,18 @@
+# IR0 Program
+ t7 = 2 * 4
+ t6 = 2 + t7
+ t8 = 9 / 3
+ t5 = t6 - t8
+ i = t5
+ t16 = 1 > 2
+ t18 = 3 < 4
+ t19 = !false
+ t17 = t18 && t19
+ t15 = t16 || t17
+ if t15 == false goto L2
+ print (i)
+ goto L3
+L2:
+ t20 = i - 1
+ print (t20)
+L3:

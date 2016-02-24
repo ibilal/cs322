@@ -1,0 +1,11 @@
+#!/bin/sh
+for i
+do
+	d=`dirname $i`
+	f=`basename $i .sc1`
+	echo $d/$f:
+	java -jar SC1Interp.jar $d/$f.sc1 > $d/$f.out
+	cat $d/$f.out
+done
+exit 0
+

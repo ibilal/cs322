@@ -1,0 +1,10 @@
+9,12c9,12
+<  t4 = call _bar(i)
+<  t3 = call _foo(t4)
+<  t2 = k + t3
+<  k = t2
+---
+>  t2 = call _bar(i)
+>  t3 = call _foo(t2)
+>  t4 = k + t3
+>  k = t4

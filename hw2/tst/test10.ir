@@ -1,0 +1,18 @@
+# IR Program
+
+_main ()
+(b)
+{
+ t1 = call _malloc(4)
+ b = t1
+ call _Body_go(b)
+ return 
+}
+
+_Body_go (obj)
+{
+ [obj]:I = 10
+ t2 = [obj]:I
+ call _printInt(t2)
+ return 
+}

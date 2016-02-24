@@ -1,0 +1,12 @@
+9,10c9,10
+<  t3 = [b]:I
+<  call _printInt(t3)
+---
+>  t2 = [b]:I
+>  call _printInt(t2)
+17,18c17,18
+<  t2 = [obj]:I
+<  4[obj]:I = t2
+---
+>  t1 = [obj]:I
+>  4[obj]:I = t1

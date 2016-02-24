@@ -1,0 +1,5 @@
+# IR0 Program
+ x = true
+ y = true
+ t1 = x == y
+ print (t1)

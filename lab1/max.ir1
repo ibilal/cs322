@@ -1,0 +1,31 @@
+# Return the largest element of the array a
+#
+_max (a, n)
+{
+
+# ... to be filled ...
+
+
+}
+
+_main ()
+(a, max)
+{
+  a = call _malloc(48)
+  [a] = 5
+  4[a] = 3
+  8[a] = 6
+  12[a] = 8
+  16[a] = 2
+  20[a] = 10
+  24[a] = 11
+  28[a] = 9
+  32[a] = 1
+  36[a] = 4
+  40[a] = 7
+  44[a] = 0
+  max = call _max(a, 12)
+  call _printStr("Array max:")
+  call _printInt(max)
+  return 
+}

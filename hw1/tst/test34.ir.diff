@@ -1,0 +1,58 @@
+5,7c5,6
+<  t1 = 2 * 4
+<  t2 = call _malloc(t1)
+<  a = t2
+---
+>  t1 = call _malloc(8)
+>  a = t1
+9,29c8,25
+<  t5 = -2
+<  t4 = t5 * 3
+<  t3 = 1 + t4
+<  t6 = 0 * 4
+<  t7 = a + t6
+<  t8 = [t7]
+<  t9 = 0 * 4
+<  t10 = a + t9
+<  [t10] = t3
+<  t13 = 0 * 4
+<  t14 = a + t13
+<  t15 = [t14]
+<  t12 = t15 < 0
+<  t11 = flag && t12
+<  if t11 == false goto L0
+<  t16 = 1 * 4
+<  t17 = a + t16
+<  t18 = [t17]
+<  t19 = 1 * 4
+<  t20 = a + t19
+<  [t20] = 4
+---
+>  t2 = -2
+>  t3 = t2 * 3
+>  t4 = 1 + t3
+>  t5 = 0 * 4
+>  t6 = a + t5
+>  [t6] = t4
+>  t7 = false
+>  if flag == false goto L1
+>  t8 = 0 * 4
+>  t9 = a + t8
+>  t10 = [t9]
+>  t11 = t10 < 0
+>  t7 = t11
+> L1:
+>  if t7 == false goto L0
+>  t12 = 1 * 4
+>  t13 = a + t12
+>  [t13] = 4
+31,34c27,30
+<  t21 = 1 * 4
+<  t22 = a + t21
+<  t23 = [t22]
+<  call _printInt(t23)
+---
+>  t14 = 1 * 4
+>  t15 = a + t14
+>  t16 = [t15]
+>  call _printInt(t16)

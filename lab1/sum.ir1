@@ -1,0 +1,31 @@
+# Return the sum of array elements (Input: array and its elm count)
+#
+_sum (a, n)              # function name and parameters
+(sum, i)                 # local variables                           
+{
+  sum = 0                # accumulated sum
+  i = 0                  # loop idx
+L0:
+  if i >= n goto L1      # reached the end of array?
+  t1 = i * 4             # compute addr of a[i]
+  t2 = a + t1            # 
+  t3 = [t2]              # fetch a[i]
+  sum = sum + t3         # add a[i] to sum
+  i = i + 1
+  goto L0
+L1:
+  return sum
+}
+
+_main ()
+(a, sum)
+{
+  a = call _malloc(12)         # alloc and init array
+  [a] = 1                      # store a[0] = 1
+  4[a] = 2                     # store a[1] = 2
+  8[a] = 3                     # store a[2] = 3
+  sum = call _sum(a,3)         # call _sum()
+  call _printStr("Array sum:")  
+  call _printInt(sum)          # print result
+  return 
+}   

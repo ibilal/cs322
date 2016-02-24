@@ -1,0 +1,6 @@
+15,16c15,16
+<  t2 = [obj]:I
+<  call _printInt(t2)
+---
+>  t1 = [obj]:I
+>  call _printInt(t1)

@@ -1,0 +1,47 @@
+# IR1 Program
+
+_go ()
+(b, i, a)
+{
+ i = 0
+ t1 = 4 * 4
+ t2 = call _malloc(t1)
+ a = t2
+ t3 = 1 * 4
+ t4 = a + t3
+ t5 = [t4]
+ t6 = 1 * 4
+ t7 = a + t6
+ [t7] = 2
+ t10 = 1 < 2
+ t12 = 3 > 4
+ t15 = 7 * 8
+ t14 = 6 + t15
+ t13 = 5 == t14
+ t11 = t12 && t13
+ t9 = t10 || t11
+ t16 = !true
+ t8 = t9 || t16
+ b = t8
+ t20 = -3
+ t19 = -t20
+ t23 = 5 * 4
+ t22 = t23 / 2
+ t24 = 1 * 4
+ t25 = a + t24
+ t26 = [t25]
+ t21 = t22 * t26
+ t18 = t19 + t21
+ t27 = i * 2
+ t17 = t18 + t27
+ i = t17
+ call _printInt(b)
+ return i
+}
+
+_main ()
+{
+ t28 = call _go()
+ call _printInt(t28)
+ return 
+}

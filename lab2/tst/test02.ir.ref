@@ -1,0 +1,13 @@
+# IR0 Program
+ t1 = true
+ t2 = 2 < 4
+ if t2 == true goto L0
+ t3 = 3 == 5
+ t1 = t3
+L0:
+ x = t1
+ t4 = !true
+ t5 = t4 == false
+ y = t5
+ t6 = x == y
+ print (t6)

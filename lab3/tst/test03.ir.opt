@@ -1,0 +1,5 @@
+# IR0 Program
+ if 3 <= 0 goto L0
+ x = 1
+L0:
+ print (x)

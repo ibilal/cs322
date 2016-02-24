@@ -1,0 +1,8 @@
+21,23c21,23
+<  t2 = !flag
+<  t1 = !t2
+<  if t1 == false goto L6
+---
+>  t1 = !flag
+>  t2 = !t1
+>  if t2 == false goto L6

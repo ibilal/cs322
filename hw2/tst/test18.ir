@@ -1,0 +1,20 @@
+# IR Program
+
+_main ()
+(b)
+{
+ t1 = call _malloc(8)
+ b = t1
+ call _B_setval(b, 10)
+ t3 = [b]:I
+ call _printInt(t3)
+ return 
+}
+
+_B_setval (obj, u)
+{
+ [obj]:I = u
+ t2 = [obj]:I
+ 4[obj]:I = t2
+ return 
+}

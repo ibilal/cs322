@@ -1,0 +1,16 @@
+# IR0 Program
+ a = 0
+ b = 0
+ t3 = true
+ t1 = a > 0
+ if t1 == true goto L1
+ t2 = b > 0
+ t3 = t2
+L1:
+ if t3 == false goto L0
+ x = 1
+ goto L2
+L0:
+ x = 2
+L2:
+ print (x)

@@ -1,0 +1,8 @@
+10,12c10,12
+<  t3 = n - 1
+<  t2 = call _back(t3)
+<  i = t2
+---
+>  t2 = n - 1
+>  t3 = call _back(t2)
+>  i = t3

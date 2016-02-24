@@ -1,0 +1,23 @@
+4,7c4,10
+<  t5 = a > 0
+<  t6 = b > 0
+<  t4 = t5 || t6
+<  if t4 == false goto L2
+---
+>  t1 = true
+>  t2 = a > 0
+>  if t2 == true goto L1
+>  t3 = b > 0
+>  t1 = t3
+> L1:
+>  if t1 == false goto L0
+9,10c12,13
+<  goto L3
+< L2:
+---
+>  goto L2
+> L0:
+12c15
+< L3:
+---
+> L2:

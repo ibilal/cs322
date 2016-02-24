@@ -1,0 +1,11 @@
+#!/bin/sh
+for i
+do
+	d=`dirname $i`
+	f=`basename $i .ir1`
+	echo $d/$f:
+	java -jar IR1Interp.jar $d/$f.ir1 | grep -v "#" > $d/$f.out
+	cat $d/$f.out
+done
+exit 0
+

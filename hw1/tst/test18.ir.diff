@@ -1,0 +1,8 @@
+11,13c11,13
+<  t3 = i + j
+<  t2 = t3 + k
+<  return t2
+---
+>  t2 = i + j
+>  t3 = t2 + k
+>  return t3

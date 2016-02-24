@@ -1,0 +1,13 @@
+# IR0 Program
+ a = 0
+ b = 0
+ t5 = a > 0
+ t6 = b > 0
+ t4 = t5 || t6
+ if t4 == false goto L2
+ x = 1
+ goto L3
+L2:
+ x = 2
+L3:
+ print (x)

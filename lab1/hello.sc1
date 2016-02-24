@@ -1,0 +1,5 @@
+StrLit 0: "Hello world!"
+
+Func 0: 0
+0.  SPRINT 0
+1.  RETURN

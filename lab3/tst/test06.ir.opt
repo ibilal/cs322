@@ -1,0 +1,5 @@
+# IR0 Program
+ x = true
+ y = 6
+ print (x)
+ print (y)

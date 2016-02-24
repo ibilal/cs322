@@ -1,0 +1,14 @@
+# IR0 Program
+ t1 = true
+ t2 = 1 > 0
+ if t2 == true goto L0
+ t3 = 1 > 2
+ t1 = t3
+L0:
+ x = t1
+ t4 = 1 + 2
+ t5 = 3 - 1
+ t6 = t4 * t5
+ y = t6
+ print (x)
+ print (y)

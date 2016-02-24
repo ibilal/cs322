@@ -1,0 +1,5 @@
+# IR0 Program
+ x = 9
+ y = -3
+ t1 = x - y
+ print (t1)

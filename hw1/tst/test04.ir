@@ -1,0 +1,30 @@
+# IR1 Program
+
+_main ()
+(a)
+{
+ t1 = 2 * 4
+ t2 = call _malloc(t1)
+ a = t2
+ t3 = 0 * 4
+ t4 = a + t3
+ t5 = [t4]
+ t6 = 0 * 4
+ t7 = a + t6
+ [t7] = 1
+ t8 = 1 * 4
+ t9 = a + t8
+ t10 = [t9]
+ t11 = 1 * 4
+ t12 = a + t11
+ [t12] = 2
+ t13 = 0 * 4
+ t14 = a + t13
+ t15 = [t14]
+ call _printInt(t15)
+ t16 = 1 * 4
+ t17 = a + t16
+ t18 = [t17]
+ call _printInt(t18)
+ return 
+}

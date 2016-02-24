@@ -1,0 +1,63 @@
+# Reverse the order of array a's elements
+#
+_reverse (a, n)
+(i, j, tempAddress1, tempAddress2, j_address, i_address, i_data, j_data)
+{
+  i = 0
+  j = n-1
+
+L0:
+  if  j <= i goto L1
+  tempAddress1 = i * 4
+  i_address = a + tempAddress1
+  i_data = [i_address]
+  tempAddress2 = j * 4
+  j_address = a + tempAddress2
+  j_data = [j_address]
+  [i_address] = j_data
+  [j_address] = i_data
+  i = i + 1
+  j = j - 1
+
+L1:
+  return
+
+}
+
+_printArray (a, n)
+(i, val)
+{
+  i = 0
+L0:
+  if i >= n goto L1
+  t1 = i * 4
+  t2 = a + t1
+  val = [t2]
+  call _printInt(val)
+  i = i + 1
+  goto L0
+L1:
+  return 
+}
+
+_main ()
+(a)
+{
+  a = call _malloc(48)
+  [a] = 5
+  4[a] = 3
+  8[a] = 6
+  12[a] = 8
+  16[a] = 2
+  20[a] = 10
+  24[a] = 11
+  28[a] = 9
+  32[a] = 1
+  36[a] = 4
+  40[a] = 7
+  44[a] = 0
+  call _reverse(a, 12)
+  call _printStr("Reversed array:")
+  call _printArray(a, 12)
+  return 
+}

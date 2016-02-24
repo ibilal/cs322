@@ -1,0 +1,9 @@
+9c9,11
+<  t3 = [b]:I
+---
+>  t2 = [b]:I
+>  call _printInt(t2)
+>  t3 = 4[b]:I
+11,12d12
+<  t4 = 4[b]:I
+<  call _printInt(t4)

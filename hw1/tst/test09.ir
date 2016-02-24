@@ -1,0 +1,26 @@
+# IR1 Program
+
+_go ()
+(a, b, c, x)
+{
+ a = true
+ t1 = !a
+ b = t1
+ t3 = a && b
+ t2 = t3 || a
+ c = t2
+ if c == false goto L0
+ x = 1
+ goto L1
+L0:
+ x = 0
+L1:
+ return x
+}
+
+_main ()
+{
+ t4 = call _go()
+ call _printInt(t4)
+ return 
+}
