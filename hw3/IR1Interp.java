@@ -22,6 +22,9 @@ public class IR1Interp {
   //-----------------------------------------------------------------
   //
   abstract static class Val {
+    //  public boolean getBool(){}
+    //  public int getInt(){}
+    public String toString() { return "UndVal"; }
     int getInt() throws Exception {
         throw new IntException("Int value expected");
     }
@@ -60,7 +63,6 @@ public class IR1Interp {
   // -- A special "undefined" value
   //
   static class UndVal extends Val {
-    public String toString() { return "UndVal"; }
   }
 
   //-----------------------------------------------------------------
@@ -298,7 +300,7 @@ public class IR1Interp {
     int addr = evaluate(n.addr, env);
     Val val = memory.get(addr);
     if (val == null)
-      throw new IntException("No value at memory location " + addr);
+      throw new IntException("Invalid location " + addr);
     env.put(n.dst.toString(), val);
     return CONTINUE;
   }
@@ -359,7 +361,7 @@ public class IR1Interp {
       }
     } 
     else {
-      throw new IntException("Error in CJump: " + n);
+      throw new IntException("Invalid CJump: " + n);
     }
     if (cond == true){
        for(LabMap l: labelMap.values()){
@@ -435,7 +437,6 @@ public class IR1Interp {
       Env newEnv = new Env();
       for (int i=0; i<func.params.length; i++) 
       {
-	//String param = "" + func.params[i];
 	Val arg = evaluate(n.args[i], env);
 	newEnv.put(func.params[i].toString(), arg);
       }	
